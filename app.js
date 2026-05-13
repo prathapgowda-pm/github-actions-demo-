@@ -1,7 +1,11 @@
-function add(a, b) {
-  return a + b;
-}
+const express = require('express');
 
-console.log("Application Running");
+const app = express();
 
-module.exports = add;
+app.get('/', (req, res) => {
+    res.send('Hello from Real DevOps Pipeline');
+});
+
+app.listen(3000, () => {
+    console.log('Server started on port 3000');
+});
